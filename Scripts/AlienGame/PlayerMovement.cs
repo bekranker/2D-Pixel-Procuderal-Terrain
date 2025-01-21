@@ -36,7 +36,7 @@ public class PlayerMovement : MonoBehaviour
         {
             _direction *= -1;
         }
-        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space) && _playerGrounded.IsGrounded())
+        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space))
         {
             _rb.AddForce(Vector2.up * _currentJumpValue * 4, ForceMode2D.Impulse);
         }
