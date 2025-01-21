@@ -385,13 +385,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _groundPrefab: {fileID: 1037571365569018432, guid: 62671dd24c2e843d0adf78fffcb1d291, type: 3}
-  _groundCount: 1048
-  _noiseScale: 0.1
-  _noiseScale2: 0.01
-  _heightMultiplier: 39.5
-  _maxHeightDifference: 4
+  _groundCount: 1000
+  _noiseScale: 0.13
+  _heightMultiplier: 35
+  _maxHeightDifference: 0.95
   _randomOffsetRange: 100
   _parent: {fileID: 1165844981}
+  _perlinNoise:
+  - FrequencyCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 2
+        outSlope: 2
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
 --- !u!1001 &226164688
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -814,7 +838,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -845,7 +869,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.11320752, g: 0.11320752, b: 0.11320752, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
