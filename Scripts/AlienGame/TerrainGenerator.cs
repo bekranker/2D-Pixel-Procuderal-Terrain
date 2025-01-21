@@ -3,7 +3,11 @@ using UnityEngine;
 
 public class TerrainGenerator : MonoBehaviour
 {
+    [Header("---Prefabs")]
     [SerializeField] private Transform _groundPrefab;
+    [SerializeField] private Transform _spike;
+    [SerializeField] private Transform _coin;
+    [Header("---Noise Props")]
     public int GroundCount;
     [SerializeField] private float _noiseScale = 0.1f;
     [SerializeField] private float _heightMultiplier = 5f;
@@ -11,6 +15,7 @@ public class TerrainGenerator : MonoBehaviour
     [SerializeField] private float _randomOffsetRange = 100f;
     [SerializeField] private Transform _parent;
     [SerializeField] private List<PerlinNoise> _perlinNoise;
+
     private float _nextSpawnX = 0f;
     private float _previousHeight = 0f;
     private float _randomSeed;

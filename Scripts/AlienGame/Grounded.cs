@@ -8,9 +8,8 @@ public class Grounded : MonoBehaviour
     [SerializeField] private Transform _raycastPoint;
 
 
-    //    [Header("---Components")]
 
-    public bool IsGrounded() => Physics2D.OverlapBox(_raycastPoint.position, _length * Vector2.one, 0, _jumpableMask);
-    public GameObject GetGrounded() => Physics2D.OverlapBox(_raycastPoint.position, _length * Vector2.one, 0, _jumpableMask).gameObject;
+    public bool IsGrounded() => Physics2D.OverlapBox(_raycastPoint.position, new Vector2(1, _length), 0, _jumpableMask);
+    public GameObject GetGrounded() => Physics2D.OverlapBox(_raycastPoint.position, new Vector2(1, _length), 0, _jumpableMask).gameObject;
 
 }
