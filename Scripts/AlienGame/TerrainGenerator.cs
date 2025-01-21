@@ -4,7 +4,7 @@ using UnityEngine;
 public class TerrainGenerator : MonoBehaviour
 {
     [SerializeField] private Transform _groundPrefab;
-    [SerializeField] private int _groundCount;
+    public int GroundCount;
     [SerializeField] private float _noiseScale = 0.1f;
     [SerializeField] private float _heightMultiplier = 5f;
     [SerializeField] private float _maxHeightDifference = 0.2f;
@@ -26,7 +26,7 @@ public class TerrainGenerator : MonoBehaviour
     {
 
 
-        for (int i = 0; i <= _groundCount; i++)
+        for (int i = 0; i <= GroundCount; i++)
         {
             float noiseInput = (_nextSpawnX * _noiseScale) + _randomSeed;
             float height = Mathf.PerlinNoise(noiseInput, 0) * _heightMultiplier;
@@ -38,7 +38,7 @@ public class TerrainGenerator : MonoBehaviour
             }
 
             // Renk hesaplama: 0 (kırmızı) -> 1 (mavi)
-            float t = i / (float)_groundCount; // 0 ile 1 arasında normalize
+            float t = i / (float)GroundCount; // 0 ile 1 arasında normalize
             Color tempColor = new Color(1 - t, 0, t, 3); // Kırmızıdan maviye geçiş
 
             Vector3 spawnPosition = new Vector3(_nextSpawnX, height, 0);
